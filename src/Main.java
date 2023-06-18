@@ -1,10 +1,16 @@
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterTest;
@@ -24,28 +30,10 @@ public class Main extends Parameters{
 	
 	@Test()
 	public void A_signUp() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		WebElement signUp = driver.findElement(By.xpath("/html/body/nav/div[1]/ul/li[8]/a"));
-		signUp.click();
-	
-	// Store the parent window handle
-	String parentWindow = driver.getWindowHandle();
-
-	// Perform an action that triggers the modal window
-
-	// Get all window handles
-	Set<String> windowHandles = driver.getWindowHandles();
-
-	// Switch to the modal window
-	for (String windowHandle : windowHandles) {
-	    if (!windowHandle.equals(parentWindow)) {
-	        driver.switchTo().window(windowHandle);
-	        break;
-	    }
-	}
-
-	// Now you are working on the modal window
-	// Perform actions on the modal window
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	WebElement signUp = driver.findElement(By.xpath("/html/body/nav/div[1]/ul/li[8]/a"));
+	signUp.click();
+		
 	WebElement userNamee = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/form/div[1]/input"));
 	userNamee.sendKeys(userName);
 	Thread.sleep(5000);
@@ -60,8 +48,6 @@ public class Main extends Parameters{
   //accept alert
     a.accept();
     driver.findElement(By.xpath("/html/body/div[2]/div/div/div[1]/button")).click();
-	// Switch back to the parent window
-	driver.switchTo().window(parentWindow);
 	
 	
 		}	
@@ -70,28 +56,9 @@ public class Main extends Parameters{
 	
 	@Test()
 	public void B_signIn() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		WebElement signUp = driver.findElement(By.xpath("/html/body/nav/div[1]/ul/li[5]/a"));
-		signUp.click();
-	
-//	// Store the parent window handle
-//	String parentWindow = driver.getWindowHandle();
-//
-//	// Perform an action that triggers the modal window
-//
-//	// Get all window handles
-//	Set<String> windowHandles = driver.getWindowHandles();
-//
-//	// Switch to the modal window
-//	for (String windowHandle : windowHandles) {
-//	    if (!windowHandle.equals(parentWindow)) {
-//	        driver.switchTo().window(windowHandle);
-//	        break;
-//	    }
-//	}
-
-	// Now you are working on the modal window
-	// Perform actions on the modal window
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	WebElement signUp = driver.findElement(By.xpath("/html/body/nav/div[1]/ul/li[5]/a"));
+	signUp.click();
 	WebElement userNamee = driver.findElement(By.xpath("/html/body/div[3]/div/div/div[2]/form/div[1]/input"));
 	userNamee.sendKeys(userName);
 	Thread.sleep(5000);
@@ -101,10 +68,6 @@ public class Main extends Parameters{
 	WebElement submit =driver.findElement(By.xpath("/html/body/div[3]/div/div/div[3]/button[2]"));
 	submit.click();
 	Thread.sleep(5000);
-
-	// Switch back to the parent window
-//	driver.switchTo().window(parentWindow);
-	
 	
 		}	
 	
@@ -140,6 +103,8 @@ public class Main extends Parameters{
 			Thread.sleep(5000);
 			driver.navigate().back();
 			driver.navigate().back();
+
+
 			
         }	
 	}	
@@ -228,10 +193,36 @@ public class Main extends Parameters{
 	}
 	
 	@Test()
-	public void G_checkOutProcess() throws InterruptedException {
+	public void G_screenshot() throws InterruptedException, IOException {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.navigate().to("https://www.demoblaze.com/cart.html");
+		Thread.sleep(5000);
+		Date date = new Date();
+		String myDate = date.toString();
+		String myUpdateDate = myDate.replace(":","-");
 		
+		//Convert web driver object to TakeScreenshot
+        TakesScreenshot scrShot =((TakesScreenshot)driver);
+        //Call getScreenshotAs method to create image file
+                File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+            //Move image file to new destination
+                File DestFile=new File(".//screenShot/"+myUpdateDate+".png");
+                //Copy file at destination
+                FileUtils.copyFile(SrcFile, DestFile);
+		
+//        		driver.navigate().to("https://www.demoblaze.com/cart.html");
+
+		
+		
+	}
+	
+	
+	@Test()
+	public void H_checkOutProcess() throws InterruptedException {
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.navigate().to("https://www.demoblaze.com/cart.html");
+		Thread.sleep(5000);
+
 		WebElement placeOrder = driver.findElement(By.xpath("/html/body/div[6]/div/div[2]/button"));
 		placeOrder.click();
 		
@@ -260,7 +251,7 @@ public class Main extends Parameters{
 	
 	@AfterTest
 	public void afterTest() {
-		driver.quit();
+//		driver.quit();
 		
 		
 	}

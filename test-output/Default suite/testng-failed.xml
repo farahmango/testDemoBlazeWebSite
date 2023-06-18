@@ -5,12 +5,9 @@
     <classes>
       <class name="Main">
         <methods>
-          <include name="C_selectSamsungRandomly"/>
           <include name="afterTest"/>
-          <include name="F_selectMonitorsandomly"/>
-          <include name="E_selectLaptopsRandomly"/>
+          <include name="G_checkOutProcess"/>
           <include name="beforeTest"/>
-          <include name="D_selectPhonesRandomly"/>
         </methods>
       </class> <!-- Main -->
     </classes>

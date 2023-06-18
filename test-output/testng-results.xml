@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-17T10:28:27 EEST" name="Default suite" finished-at="2023-06-17T10:30:52 EEST" duration-ms="145254">
+  <suite started-at="2023-06-18T11:14:02 EEST" name="Default suite" finished-at="2023-06-18T11:16:43 EEST" duration-ms="160684">
     <groups>
     </groups>
-    <test started-at="2023-06-17T10:28:27 EEST" name="Default test" finished-at="2023-06-17T10:30:52 EEST" duration-ms="145254">
+    <test started-at="2023-06-18T11:14:02 EEST" name="Default test" finished-at="2023-06-18T11:16:43 EEST" duration-ms="160684">
       <class name="Main">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:28:27 EEST" name="beforeTest" finished-at="2023-06-17T10:28:28 EEST" duration-ms="1011" status="PASS">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:14:02 EEST" name="beforeTest" finished-at="2023-06-18T11:14:04 EEST" duration-ms="1591" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="A_signUp()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:28:28 EEST" name="A_signUp" finished-at="2023-06-17T10:28:43 EEST" duration-ms="15551" status="PASS">
+        <test-method signature="A_signUp()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:14:04 EEST" name="A_signUp" finished-at="2023-06-18T11:14:20 EEST" duration-ms="15761" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- A_signUp -->
-        <test-method signature="B_signIn()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:28:43 EEST" name="B_signIn" finished-at="2023-06-17T10:28:59 EEST" duration-ms="15686" status="PASS">
+        <test-method signature="B_signIn()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:14:20 EEST" name="B_signIn" finished-at="2023-06-18T11:14:36 EEST" duration-ms="15980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- B_signIn -->
-        <test-method signature="C_selectSamsungRandomly()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:28:59 EEST" name="C_selectSamsungRandomly" finished-at="2023-06-17T10:29:28 EEST" duration-ms="28727" status="PASS">
+        <test-method signature="C_selectSamsungRandomly()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:14:36 EEST" name="C_selectSamsungRandomly" finished-at="2023-06-18T11:15:05 EEST" duration-ms="29686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- C_selectSamsungRandomly -->
-        <test-method signature="D_selectPhonesRandomly()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:29:28 EEST" name="D_selectPhonesRandomly" finished-at="2023-06-17T10:30:06 EEST" duration-ms="38025" status="PASS">
+        <test-method signature="D_selectPhonesRandomly()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:15:05 EEST" name="D_selectPhonesRandomly" finished-at="2023-06-18T11:15:44 EEST" duration-ms="38760" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- D_selectPhonesRandomly -->
-        <test-method signature="E_selectLaptopsRandomly()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:30:06 EEST" name="E_selectLaptopsRandomly" finished-at="2023-06-17T10:30:32 EEST" duration-ms="26476" status="PASS">
+        <test-method signature="E_selectLaptopsRandomly()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:15:44 EEST" name="E_selectLaptopsRandomly" finished-at="2023-06-18T11:16:11 EEST" duration-ms="27131" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- E_selectLaptopsRandomly -->
-        <test-method signature="F_selectMonitorsandomly()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:30:32 EEST" name="F_selectMonitorsandomly" finished-at="2023-06-17T10:30:47 EEST" duration-ms="14794" status="PASS">
+        <test-method signature="F_selectMonitorsandomly()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:16:11 EEST" name="F_selectMonitorsandomly" finished-at="2023-06-18T11:16:27 EEST" duration-ms="15346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- F_selectMonitorsandomly -->
-        <test-method signature="G_checkOutProcess()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:30:47 EEST" name="G_checkOutProcess" finished-at="2023-06-17T10:30:52 EEST" duration-ms="4950" status="PASS">
+        <test-method signature="G_screenshot()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:16:27 EEST" name="G_screenshot" finished-at="2023-06-18T11:16:33 EEST" duration-ms="5959" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- G_checkOutProcess -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:Main@2e6ba49a]" started-at="2023-06-17T10:30:52 EEST" name="afterTest" finished-at="2023-06-17T10:30:52 EEST" duration-ms="0" status="PASS">
+        </test-method> <!-- G_screenshot -->
+        <test-method signature="H_checkOutProcess()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:16:33 EEST" name="H_checkOutProcess" finished-at="2023-06-18T11:16:43 EEST" duration-ms="10410" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- H_checkOutProcess -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:Main@5f5b5ca4]" started-at="2023-06-18T11:16:43 EEST" name="afterTest" finished-at="2023-06-18T11:16:43 EEST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
